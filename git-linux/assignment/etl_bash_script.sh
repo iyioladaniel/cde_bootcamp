@@ -59,6 +59,7 @@ rm "$TRANS_FILE/temp_$FILE_NAME"
 # Print the first line of the transformed file to confirm transformation
 echo -e "\nPrinting the first line of the transformed file:"
 head -1 "$TRANS_FILE/$FILE_NAME"
+echo -e "\n"
 
 # Check if the file has been loaded into the Transformed folder
 echo -e "Checking if file is present in the transformed folder...\n=======================================================\n"

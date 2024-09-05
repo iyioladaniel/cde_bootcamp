@@ -33,15 +33,66 @@ fi
 #echo "Creating the $DB_NAME database..."
 #sudo -u postgres psql -c "CREATE DATABASE IF $DB_NAME;"
 
+# Create the user and assign a password
+echo -e "\nChecking if the user exists ortherwise create a user....\n"
+USER_EXISTS=$(sudo -u postgres psql -tAc "SELECT 1 FROM pg_roles WHERE rolname='$DB_USER'")
+if [ "$USER_EXISTS" = "1" ]; then
+    echo "User $DB_USER already exists."
+else
+    echo "Creating user $DB_USER..."
+    sudo -u postgres psql -c "CREATE USER $DB_USER WITH PASSWORD '$DB_PASS';"
+fi
 
-# Function to create tables in the database using the provided SQL queries
-echo "Creating tables in the $DB_NAME database..."
-cd /tmp
-sudo -u postgres psql -d "$DB_NAME" -f "/home/diyiola/CDE/git-linux/assignment/parch_and_posey/create_tables.sql"
-
-# Function to create a new PostgreSQL user
-echo "Creating PostgreSQL user..."
-sudo -u postgres psql -c "CREATE USER $DB_USER WITH PASSWORD '$DB_PASS';"
+# Grant privileges to the user on the database
+echo "Granting privileges to user $DB_USER on database $DB_NAME..."
 sudo -u postgres psql -c "GRANT ALL PRIVILEGES ON DATABASE $DB_NAME TO $DB_USER;"
+
+
+# Create tables in the database using the provided SQL queries
+echo "Creating tables in the $DB_NAME database..."
+
+sudo -u postgres psql -d "$DB_NAME" -c "
+CREATE TABLE region (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL
+);
+CREATE TABLE sales_reps (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    region_id INT,
+    FOREIGN KEY (region_id) REFERENCES region(id) ON DELETE SET NULL
+);
+CREATE TABLE accounts (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    website VARCHAR(255),
+    lat DECIMAL(10, 7),
+    long DECIMAL(10, 7),
+    primary_poc VARCHAR(255),
+    sales_rep_id INT,
+    FOREIGN KEY (sales_rep_id) REFERENCES sales_reps(id) ON DELETE SET NULL
+);
+CREATE TABLE orders (
+    id SERIAL PRIMARY KEY,
+    account_id INT NOT NULL,
+    occurred_at TIMESTAMP NOT NULL,
+    standard_qty INT DEFAULT 0,
+    gloss_qty INT DEFAULT 0,
+    poster_qty INT DEFAULT 0,
+    total INT,
+    standard_amt_usd DECIMAL(10, 2),
+    gloss_amt_usd DECIMAL(10, 2),
+    poster_amt_usd DECIMAL(10, 2),
+    total_amt_usd DECIMAL(10, 2),
+    FOREIGN KEY (account_id) REFERENCES accounts(id) ON DELETE CASCADE
+);
+CREATE TABLE web_events (
+    id SERIAL PRIMARY KEY,
+    account_id INT NOT NULL,
+    occurred_at TIMESTAMP NOT NULL,
+    channel VARCHAR(255),
+    FOREIGN KEY (account_id) REFERENCES accounts(id) ON DELETE CASCADE
+);
+"
 
 echo "PostgreSQL setup completed successfully."

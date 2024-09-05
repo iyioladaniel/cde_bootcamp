@@ -85,16 +85,13 @@ A separate script, **`psql_load.sh`**, loads CSV files into their respective tab
 ### Analytical Queries:
 
 1. **Find a list of order IDs where either gloss_qty or poster_qty is greater than 4000.**
-   - Query located in `queries.sql`.
 
 2. **Return a list of orders where standard_qty is zero and either gloss_qty or poster_qty is over 1000.**
-   - Query located in `queries.sql`.
 
 3. **Find all company names that start with 'C' or 'W' where the primary contact contains 'ana' or 'Ana' but not 'eana'.**
-   - Query located in `queries.sql`.
 
 4. **Provide a table showing regions for each sales rep along with associated accounts.**
-   - Query located in `queries.sql`.
+   - All queries are located in ![queries.sql](./04_parch_and_posey/queries.sql).
 
 ---
 

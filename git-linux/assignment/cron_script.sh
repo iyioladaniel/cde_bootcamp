@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Exit immediately if a command exits with a non-zero status
+set -e
+
 # Path to the ETL script
 SCRIPT_PATH="./etl_bash_script.sh"
 

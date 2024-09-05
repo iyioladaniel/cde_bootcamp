@@ -4,9 +4,9 @@
 set -e
 
 # Define paths
-ORG_FILE="raw"
-TRANS_FILE="Transformed"
-EDITED_FILE="Gold"
+ORG_FILE="01_bash_etl/raw"
+TRANS_FILE="01_bash_etl/Transformed"
+EDITED_FILE="01_bash_etl/Gold"
 
 # Define URL and file name
 URL="https://www.stats.govt.nz/assets/Uploads/Annual-enterprise-survey/Annual-enterprise-survey-2023-financial-year-provisional/Download-data/annual-enterprise-survey-2023-financial-year-provisional.csv"

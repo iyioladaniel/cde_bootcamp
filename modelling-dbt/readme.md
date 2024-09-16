@@ -1,5 +1,3 @@
---
-
 # Fufu Republic Dimensional Model Assignment
 
 This repository contains my work for the Fufu Republic case study, a restaurant chain operating across multiple branches in Nigeria. The objective of the assignment is to design a data model and develop a dimensional model for data-driven decision-making, focusing on sales trends and customer behavior.

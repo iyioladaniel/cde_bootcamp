@@ -17,7 +17,7 @@ In Task 1, I created an Entity-Relationship Diagram (ERD) to map out the necessa
 - **Dining Options**: Different ways customers can place orders (e.g., dine-in, take-out).
 - **Menu**: Contains different menu per location including whether the menu is active or not.
 
-** Link to Model Diagram **
+#### Link to Model Diagram
 ![Fufu Restaurant](./fufu_resturant.png)
 
 

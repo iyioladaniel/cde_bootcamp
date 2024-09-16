@@ -16,9 +16,7 @@ In Task 1, I created an Entity-Relationship Diagram (ERD) to map out the necessa
 - **Menu**: Contains different menu per location including whether the menu is active or not.
 
 #### Link to Model Diagram
-![Fufu Restaurant](![fufu_resturant](https://github.com/user-attachments/assets/409d4888-6327-4333-8588-63973dbf562d)
-./fufu_resturant.png)
-
+![Fufu Restaurant](https://github.com/user-attachments/assets/409d4888-6327-4333-8588-63973dbf562d)
 
 ### ERD Structure:
 - Entities such as `Branch`, `Customer`, `Product`, `Staff`, `Menu`, and `Sales` have been defined with primary and foreign keys to establish relationships.

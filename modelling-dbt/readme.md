@@ -12,12 +12,17 @@ In Task 1, I created an Entity-Relationship Diagram (ERD) to map out the necessa
 - **Products**: Menu items offered at each branch, varying across locations.
 - **Sales**: Detailed records of transactions including the product purchased, customer, branch, payment method, and dining option.
 - **Staff**: Employees working at different branches, linked to their respective branches.
-- **Customers**: Information about the customers who place orders.
+- **Customer**: Information about the customers who place orders.
 - **Payments**: Payment methods used for transactions.
 - **Dining Options**: Different ways customers can place orders (e.g., dine-in, take-out).
+- **Menu**: Contains different menu per location including whether the menu is active or not.
+
+** Link to Model Diagram **
+![Fufu Restaurant](./fufu_resturant.png)
+
 
 ### ERD Structure:
-- Entities such as `Branch`, `Customer`, `Product`, `Staff`, and `Sales` have been defined with primary and foreign keys to establish relationships.
+- Entities such as `Branch`, `Customer`, `Product`, `Staff`, `Menu`, and `Sales` have been defined with primary and foreign keys to establish relationships.
 - The relationships between entities (e.g., a branch having many sales, a customer making many purchases) were modeled using one-to-many relationships.
 
 ## Task 2: Dimensional Model (In Progress)

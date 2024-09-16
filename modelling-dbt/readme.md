@@ -50,8 +50,7 @@ The grain of the fact table is at the individual sales transaction level, record
 - **Fact Table**: The sales table captures the quantitative data needed for analysis, such as quantity sold, total amount, and the relationship with the product and location dimensions.
 
 ## Next Steps
-
-- **Complete Task 2**: Finish constructing the dimensional model by integrating all dimensions and facts into a complete structure. Further analysis will involve answering the business question posed above and potentially expanding on additional business processes.
+Finish constructing the dimensional model by integrating all dimensions and facts into a complete structure. Further analysis will involve answering the business question posed above and potentially expanding on additional business processes.
 
 ## Conclusion
 

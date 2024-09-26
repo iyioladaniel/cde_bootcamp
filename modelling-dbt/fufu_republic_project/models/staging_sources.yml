@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: fufu_republic_dev
+    tables:
+      - name: branches
+      - name: products
+      - name: sales
+      - name: customers
+      - name: staff
+      - name: menu

@@ -1,0 +1,13 @@
+fufu_republic_project:
+  outputs:
+    dev:
+      account: DXXSAYG-MLB26382
+      database: fufu_republic
+      private_key_path: /workspaces/cde_bootcamp/modelling-dbt/rsa_key.p8
+      role: ACCOUNTADMIN
+      schema: fufu_republic_dev
+      threads: 2
+      type: snowflake
+      user: iyioladaniel
+      warehouse: COMPUTE_WH
+  target: dev

@@ -1,2 +1,6 @@
 *.env
 *.csv
+*.venv
+*.p8
+*.pub
+/modelling-dbt/dbt-core/

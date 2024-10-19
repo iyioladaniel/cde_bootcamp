@@ -1,2 +1,4 @@
 *.env
 *.csv
+/home/diyiola/cde_bootcamp/airflow/airflow_project/pageviews/pageviews*
+CDE Airflow Assignment.docx

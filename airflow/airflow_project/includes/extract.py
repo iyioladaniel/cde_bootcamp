@@ -1,4 +1,3 @@
-
 def _fetch_pageviews(pagenames):
     result = dict.fromkeys(pagenames, 0)
     with open(f"/tmp/wikipageviews", "r") as f:

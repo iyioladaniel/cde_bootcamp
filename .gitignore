@@ -1,2 +1,5 @@
 *.env
 *.csv
+airflow/airflow_project/pageviews/pageviews-20241019-90000.gz
+airflow/airflow_project/pageviews/pageviews-20241019-100000
+CDE Airflow Assignment.docx

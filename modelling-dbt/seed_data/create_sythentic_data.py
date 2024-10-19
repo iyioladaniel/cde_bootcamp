@@ -167,7 +167,7 @@ df_customers.to_csv('customers.csv', index=False)
 df_branches.to_csv('branches.csv', index=False)
 df_products.to_csv('products.csv', index=False)
 df_menus.to_csv('menu.csv', index=False)
-df_sales.to_csv('transactions.csv', index=False)
+df_sales.to_csv('sales.csv', index=False)
 
 
 print("Synthetic data generated and saved as CSV files!")
